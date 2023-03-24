@@ -17,7 +17,6 @@ const createTuit = (req, res) => {
     newTuit.dislikes = 0;
     newTuit.liked = false;
     tuits.push(newTuit);
-    console.log(newTuit)
     res.json(newTuit);
 }
   
