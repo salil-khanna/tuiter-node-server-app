@@ -1,4 +1,4 @@
-import people from './users.js'
+const people = require('./users.js')
 let users = people
 
 const UserController = (app) => {
@@ -52,5 +52,4 @@ const updateUser = (req, res) => {
     );
     res.sendStatus(200);
 }
-   
-export default UserController
+module.exports = UserController

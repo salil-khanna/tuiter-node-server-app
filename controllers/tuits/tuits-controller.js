@@ -1,11 +1,11 @@
-import * as tuitsDao from './tuits-dao.js'
+const tuitsDao = require('./tuits-dao');
 
-export default (app) => {
- app.post('/api/tuits', createTuit);
- app.get('/api/tuits', findTuits);
- app.put('/api/tuits/:tid', updateTuit);
- app.delete('/api/tuits/:tid', deleteTuit);
-}
+module.exports = (app) => {
+    app.post('/api/tuits', createTuit);
+    app.get('/api/tuits', findTuits);
+    app.put('/api/tuits/:tid', updateTuit);
+    app.delete('/api/tuits/:tid', deleteTuit);
+};
 
 const findTuits = async (req, res) => {
   const tuits = await tuitsDao.findTuits()
